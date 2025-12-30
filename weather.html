@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="weather.css"/>
+
+  <!--<script src="calculator.js"></script>-->
+</head>
+
+<body>
+<!--
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Weather</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Mumbai</a></li>
+            <li><a class="dropdown-item" href="#">Delhi</a></li>
+            <li><a class="dropdown-item" href="#">Bangalore</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</nav>
+<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+  <div class="bg-dark p-4">
+    <h5 class="text-body-emphasis h4">Collapsed content</h5>
+    <span class="text-body-secondary">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar navbar-light bg-white">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center"> <div class="col"> <div class="card mb-4 rounded-3 shadow-sm"> <div class="card-header py-3"> <h4 class="my-0 fw-normal">Free</h4> </div> <div class="card-body"> <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1> <ul class="list-unstyled mt-3 mb-4"> <li>10 users included</li> <li>2 GB of storage</li> <li>Email support</li> <li>Help center access</li> </ul> <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> </div> </div> </div> <div class="col"> <div class="card mb-4 rounded-3 shadow-sm"> <div class="card-header py-3"> <h4 class="my-0 fw-normal">Pro</h4> </div> <div class="card-body"> <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1> <ul class="list-unstyled mt-3 mb-4"> <li>20 users included</li> <li>10 GB of storage</li> <li>Priority email support</li> <li>Help center access</li> </ul> <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> </div> </div> </div> <div class="col"> <div class="card mb-4 rounded-3 shadow-sm border-primary"> <div class="card-header py-3 text-bg-primary border-primary"> <h4 class="my-0 fw-normal">Enterprise</h4> </div> <div class="card-body"> <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1> <ul class="list-unstyled mt-3 mb-4"> <li>30 users included</li> <li>15 GB of storage</li> <li>Phone and email support</li> <li>Help center access</li> </ul> <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button> </div> </div> </div> </div>
+<h2 class="display-6 text-center mb-4">Weather of other common places</h2>
+<div class="table-responsive"> <table class="table text-center"> <thead> <tr> <th style="width: 34%;"></th> <th style="width: 22%;">Free</th> <th style="width: 22%;">Pro</th> <th style="width: 22%;">Enterprise</th> </tr> </thead> <tbody> <tr> <th scope="row" class="text-start">Public</th> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> </tr> <tr> <th scope="row" class="text-start">Private</th> <td></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> </tr> </tbody> <tbody> <tr> <th scope="row" class="text-start">Permissions</th> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> </tr> <tr> <th scope="row" class="text-start">Sharing</th> <td></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> </tr> <tr> <th scope="row" class="text-start">Unlimited members</th> <td></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> </tr> <tr> <th scope="row" class="text-start">Extra security</th> <td></td> <td></td> <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td> </tr> </tbody> </table> </div>
+-->
+  <main class="card" role="main" aria-labelledby="title">
+    <header class="top">
+      <!-- User-uploaded image used as logo/header image -->
+      <div>
+        <h1 id="title">Day 1: Weather App</h1>
+        <p class="lead">Fetch real-time weather for any city using an API (OpenWeatherMap).</p>
+      </div>
+    </header>
+    <section class="search">
+      <label class="sr-only" for="city">City</label>
+      <input id="city" type="search" placeholder="Enter city (e.g. London)" autocomplete="off" />
+      <button id="searchBtn" class="btn">Search</button>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="row">
+         <div class="left">
+          <h2 id="cityName">—</h2>
+          <div class="meta">
+            <span id="desc">—</span> · <span id="localTime">—</span>
+          </div>
+          <div class="temp-row">
+            <div class="temp">
+              <span id="temp">—</span><small>°C</small>
+            </div>
+            <div class="icon-wrap">
+              <img id="icon" src="" alt="" />
+            </div>
+          </div>
+
+          <div class="stats">
+            <div>Humidity: <strong id="humidity">—</strong>%</div>
+            <div>Wind: <strong id="wind">—</strong> m/s</div>
+            <div>Sunrise: <strong id="sunrise">—</strong></div>
+            <div>Sunset: <strong id="sunset">—</strong></div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div id="mapPlaceholder" class="map">Map / extra content</div>
+        </div>
+      </div>
+    </section>
+    <div id="status" class="status muted">Enter a city and press Search.</div>
+
+    <details style="margin-top:14px">
+      <summary>How it works (short)</summary>
+      <p class="small">`weather.js` builds the API URL, fetches the current weather JSON, extracts relevant fields and updates the DOM. It uses `async/await`, handles common errors, and formats times using the timezone offset returned by the API.</p>
+    </details>
+  </main>
+<script src="weather.js"></script>
+</body>
+</html>
