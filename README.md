@@ -1,75 +1,75 @@
-# Weather-App
-🌦️ Weather App
+# 🌦️ Weather-App
 
 A clean, responsive Weather App built using HTML, CSS, and JavaScript that fetches real-time weather data from the OpenWeatherMap API.
 This project focuses on core frontend concepts like API handling, async JavaScript, DOM manipulation, and UI/UX design.
 
-🚀 Features
+## 🚀 Features
 
-🔍 Search weather by city name
-🌡️ Displays temperature (°C), humidity, wind speed
-🌅 Shows sunrise & sunset times
-🕒 Displays local time of the searched city
-🌥️ Weather condition with icon
-❌ Graceful error handling (City not found)
-🎨 Modern dark UI with smooth animations
-📱 Responsive design (mobile-friendly)
+- 🔍 Search weather by **city name**
+- 🌡️ Displays **current temperature (°C)**
+- 🌥️ Weather description with **dynamic icon**
+- 💧 Humidity and 🌬️ wind speed
+- 🌅 **Sunrise & sunset time** (timezone-aware)
+- 🕒 Displays **local time of the searched city**
+- ❌ Graceful **error handling** for invalid cities
+- 🎨 Clean **dark UI** with gradients and animations
+- 📱 Fully **responsive design**
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-HTML5 – Semantic structure
-CSS3 – Custom dark theme, gradients, responsive layout
-JavaScript (ES6+)
-Fetch API
-Async / Await
-DOM manipulation
-OpenWeatherMap API
+- **HTML5** — Semantic and accessible markup  
+- **CSS3** — Dark theme, gradients, animations, responsive layout  
+- **JavaScript (ES6+)**
+  - Fetch API
+  - Async / Await
+  - DOM manipulation
+- **OpenWeatherMap API**
+## ⚙️ **How the App Works**
 
-⚙️ How It Works
+1. User enters a city name and clicks **Search**
+2. JavaScript builds the API request URL
+3. Weather data is fetched using the **Fetch API**
+4. JSON response is parsed and relevant data is extracted
+5. UI updates dynamically with weather details
+6. Errors (e.g., city not found) are handled gracefully
 
-User enters a city name and clicks Search
-App calls OpenWeatherMap API using fetch()
-Weather data is received as JSON
-Relevant fields are extracted:
-Temperature
-Weather description
-Wind, humidity
-Sunrise & sunset (with timezone handling)
+## 🧠 Key Learnings
 
-🧠 Key Learnings
-
-How to work with external APIs
+Working with real-world REST APIs
 Handling HTTP errors (404, network issues)
-Using async/await correctly
 Understanding UNIX timestamps & timezones
-Importance of CSS contrast and UI hierarchy
-Debugging real-world frontend issues
+Writing clean, modular JavaScript
+Debugging UI and CSS contrast issues
+Importance of user-friendly error messages
 
-❌ Error Handling
+## ❌ Error Handling
 
 If the city is not found:
 Weather result is hidden
 A clear error message is shown to the user
 Prevents app crashes or broken UI
 
-🔐 API Key Setup
+## 🔐 API Key Setup
 
-This app uses OpenWeatherMap API.
-Get a free API key from:
-👉 https://openweathermap.org/api
-In weather.js, replace:
-const API_KEY = 'YOUR_API_KEY_HERE';
+This project uses the **OpenWeatherMap API**.
+
+1. Get a free API key from:  
+   👉 https://openweathermap.org/api
+
+2. Replace the API key in `weather.js`:
+   ```js
+   const API_KEY = 'YOUR_API_KEY_HERE';
 
 ⚠️ Note:
 API keys should not be exposed in production apps.
-This is acceptable for learning/demo purposes only.
+This setup is acceptable for learning and demo purposes.
 
-👤 Author
+## 👤 Author
 
 Archisman Mitra
 Learning by building real projects 🚀
 
-⭐ Acknowledgements
+## ⭐ Acknowledgements
 
 OpenWeatherMap API
 Inspiration from modern weather dashboards
