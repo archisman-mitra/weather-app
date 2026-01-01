@@ -29,6 +29,7 @@ function setStatus(msg, isError = false)
 {
   statusEl.textContent = msg;
   statusEl.style.color = isError ? '#ffbaba' : '';
+  statusEl.classList.toggle('error', isError);
 }
 
 // format unix timestamp + timezone offset to local time string
@@ -51,17 +52,24 @@ function doSearch()
 {
   const city = cityInput.value.trim();
 
-  if (!city)
-  {
-    console.log('No city entered');
+  if (!city) {
+    setStatus('Please enter a city.', true);
     return;
   }
-  console.log('Searching for city:', city);
 
-  fetchWeather(city).then(data => {
-    console.log('API response:',data);
-    renderWeather(data);
-  });
+  setStatus('Loading...');
+  resultSection.classList.add('hidden');
+
+  fetchWeather(city)
+    .then(data => {
+      console.log('API response:', data);
+      renderWeather(data);
+    })
+    .catch(err => {
+      console.error(err);
+      resultSection.classList.add('hidden');
+      setStatus(err.message || 'City not found.', true);
+    });
 }
 
 async function fetchWeather(city)
@@ -71,8 +79,14 @@ async function fetchWeather(city)
   console.log('Fetching URl: ',url);
 
   const response= await fetch(url);
+   if (!response.ok) {
+    if (response.status === 404) {
+      throw new Error('City not found');
+    }
+    throw new Error('Something went wrong. Try again.');
+  }
   const data = await response.json();
-   if (response.status === 404) throw new Error('City not found');
+  //if (response.status === 404) throw new Error('City not found');
    
   return data;
 }
